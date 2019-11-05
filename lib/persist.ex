@@ -2,17 +2,11 @@ defmodule Persist do
   @moduledoc """
   Documentation for Persist.
   """
+  def get do
+    :persistent_term.get(:foo)
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Persist.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def set(x) do
+    :persistent_term.put(:foo, x)
   end
 end
